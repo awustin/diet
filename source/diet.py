@@ -3,6 +3,7 @@ import pandas as pd
 from pandas import ExcelWriter
 from pandas import ExcelFile
 import openpyxl
+from foodlist import FoodList
 
 
 class App():
@@ -16,7 +17,8 @@ class App():
         s3 = pd.Series([pd.datetime(2019,12,17), 'c', 74, 25, 22, 400], index=columns)
         d = pd.DataFrame.from_dict([s1, s2, s3])
         print(d)
-        d.to_csv('example.csv')
+
+        foodlist = FoodList()
 
 if __name__=="__main__":
     myApp = App()
