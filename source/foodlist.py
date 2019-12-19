@@ -1,15 +1,11 @@
-# 
-# Manages list of food
 #
-from os import path
+# File where the food list is stored
+#
+from source.foodlistfile import FoodListFile
 
 
 class FoodList(object):
-    new_item = None
-    file_path = path.join(path.dirname(path.curdir), 'files')
+    file = None
 
     def __init__(self):
-        print(self.file_path)
-    
-    def create_food_list(self):
-        pass
+        file = FoodListFile()
